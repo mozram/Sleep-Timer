@@ -5,8 +5,29 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Sleep_Timer"
         mc:Ignorable="d"
-        Title="MainWindow" Height="350" Width="525">
+        Title="Sleep Timer by ZR" Height="260" Width="250">
     <Grid>
-        
+        <Grid.RowDefinitions>
+            <RowDefinition Height="30"/>
+            <RowDefinition Height="30"/>
+            <RowDefinition Height="30"/>
+            <RowDefinition Height="30"/>
+            <RowDefinition Height="30"/>
+            <RowDefinition Height="30"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <TextBox Name="txtboxMinutes" Margin="3,3,3,3"/>
+        <RadioButton Name="rdbtnSleep" Content="Sleep" Grid.Column="1" VerticalAlignment="Center" Margin="3,3,3,3"/>
+        <RadioButton Name="rdbtnHibernate" Content="Hibernate" Grid.Column="1" Grid.Row="1" VerticalAlignment="Center" Margin="3,3,3,3"/>
+        <RadioButton Name="rdbtnShutdown" Content="Shutdown" Grid.Column="1" Grid.Row="2" VerticalAlignment="Center" Margin="3,3,3,3"/>
+        <RadioButton Name="rdbtnRestart" Content="Restart" Grid.Column="1" Grid.Row="3" VerticalAlignment="Center" Margin="3,3,3,3"/>
+        <RadioButton Name="rdbtnLogoff" Content="Log Off" Grid.Column="1" Grid.Row="4" VerticalAlignment="Center" Margin="3,3,3,3"/>
+        <RadioButton Name="rdbtnLock" Content="Lock Windows" Grid.Column="1" Grid.Row="5" VerticalAlignment="Center" Margin="3,3,3,3"/>
+        <Button Name="btnStart" Content="Start" Grid.ColumnSpan="2" Grid.Row="6" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="3,3,3,3" Width="100" Height="25" Click="btnStart_Click"/>
+        <Label Name="lblCounter" Grid.Row="5" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="2,2,2,2"/>
     </Grid>
 </Window>

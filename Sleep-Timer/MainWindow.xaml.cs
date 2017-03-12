@@ -105,6 +105,25 @@ namespace Sleep_Timer
             timer.Start();
 
         }
+
+        private void txtboxMinutes_GotFocus(object sender, RoutedEventArgs e)
+        {
+            int result;
+            if(!int.TryParse(txtboxMinutes.Text, out result))
+            {
+                txtboxMinutes.Text = "";
+            }
+                    
+        }
+
+        private void txtboxMinutes_LostFocus(object sender, RoutedEventArgs e)
+        {
+            int result;
+            if (!int.TryParse(txtboxMinutes.Text, out result))
+            {
+                txtboxMinutes.Text = "Enter time in minutes";
+            }
+        }
     }
 
 

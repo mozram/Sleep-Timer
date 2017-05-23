@@ -41,6 +41,7 @@ namespace Sleep_Timer
         public MainWindow()
         {
             InitializeComponent();
+            rdbtnSleep.IsChecked = true;
         }
 
         private void btnStart_Click(object sender, RoutedEventArgs e)
@@ -50,6 +51,7 @@ namespace Sleep_Timer
             if(command == "error")
             {
                 MessageBox.Show("Failed to set command!");
+                return;
             }
 
             int minutes = 0;
@@ -122,6 +124,14 @@ namespace Sleep_Timer
             if (!int.TryParse(txtboxMinutes.Text, out result))
             {
                 txtboxMinutes.Text = "Enter time in minutes";
+            }
+        }
+
+        private void txtboxMinutes_KeyUp(object sender, KeyEventArgs e)
+        {
+            if(e.Key == Key.Enter)
+            {
+                btnStart_Click(sender, e);
             }
         }
     }

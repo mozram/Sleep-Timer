@@ -20,7 +20,7 @@
             <ColumnDefinition Width="*"/>
             <ColumnDefinition Width="*"/>
         </Grid.ColumnDefinitions>
-        <TextBox Name="txtboxMinutes" Margin="3,3,3,3" Background="#FFB9B9B9" Text="Enter time in minutes" GotFocus="txtboxMinutes_GotFocus" LostFocus="txtboxMinutes_LostFocus"/>
+        <TextBox Name="txtboxMinutes" Margin="3,3,3,3" Background="#FFB9B9B9" Text="Enter time in minutes" GotFocus="txtboxMinutes_GotFocus" LostFocus="txtboxMinutes_LostFocus" KeyUp="txtboxMinutes_KeyUp"/>
         <RadioButton Name="rdbtnSleep" Content="Sleep" Grid.Column="1" VerticalAlignment="Center" Margin="3,3,3,3" Foreground="#FFDEDEDE"/>
         <RadioButton Name="rdbtnHibernate" Content="Hibernate" Grid.Column="1" Grid.Row="1" VerticalAlignment="Center" Margin="3,3,3,3" Foreground="#FFDEDEDE"/>
         <RadioButton Name="rdbtnShutdown" Content="Shutdown" Grid.Column="1" Grid.Row="2" VerticalAlignment="Center" Margin="3,3,3,3" Foreground="#FFDEDEDE"/>
